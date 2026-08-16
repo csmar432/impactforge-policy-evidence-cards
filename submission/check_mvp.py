@@ -136,6 +136,8 @@ def main() -> None:
     assert 'data-choice="definition"' in page
     assert 'data-choice="help"' in page
     assert "self-reported clarity" in page
+    assert 'id="feedback-recovery"' in page
+    assert "official federal SNAP student rules" in page
     assert "That is the intended outcome" in page
     assert "That is useful feedback" in page
     assert "Potential eligibility is not reported receipt." in page

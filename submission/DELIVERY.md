@@ -21,6 +21,7 @@
 - [x] Dependency-free acceptance check
 - [x] Local acceptance and Chromium smoke tests completed
 - [x] Internal requirements matrix completed
+- [x] Five-persona synthetic usability evaluation completed; it is not real-student evidence
 
 ## Official proof-of-work minimum
 
@@ -41,11 +42,12 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 8. `DEVPOST.md` content to copy into the submission form
 9. `IMPACT_STATEMENT.md` content to copy into the impact field
 10. `AUDIT_MATRIX.md` for internal handoff only
+11. `SYNTHETIC_USER_TEST.md` for internal usability preflight only
 
 ## Optional external additions
 
 - [ ] Add a public project link (officially optional but encouraged)
-- [ ] Run the five-minute reader test with real students (not required; may strengthen impact and UX evidence)
+- [ ] Run the five-minute reader test with real students (the synthetic evaluation cannot substitute for real-student evidence)
 - [ ] Record a 60–90 second demo video (optional proof format; a current screenshot already meets the proof minimum)
 
 ## Final human checks

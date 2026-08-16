@@ -38,10 +38,14 @@
     }
     .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 20px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
+    .brand:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; border-radius: 12px; }
     .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--green); color: white; font-size: .82rem; }
     .topnav { display: flex; gap: 20px; color: var(--muted); font-size: .86rem; }
     .topnav a { text-decoration: none; }
     .topnav a:hover, .topnav a:focus-visible { color: var(--green); }
+    .mobile-jump { display: none; }
+    .mobile-jump a { flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; color: var(--green); font-size: .75rem; font-weight: 800; text-align: center; text-decoration: none; }
+    .mobile-jump a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 
     .hero { padding: 72px 0 52px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 56px; }
     .eyebrow, .kicker { color: var(--green); font-size: .75rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
@@ -69,7 +73,7 @@
     .evidence-card h3 { max-width: 280px; margin: 50px 0 12px; font-size: 1.55rem; line-height: 1.06; letter-spacing: -.04em; }
     .stat { display: flex; align-items: baseline; gap: 10px; margin: 0 0 12px; color: var(--green); }
     .stat strong { font-size: clamp(3.2rem, 6vw, 5.2rem); line-height: .9; letter-spacing: -.09em; }
-    .stat span { max-width: 120px; color: var(--muted); font-size: .82rem; line-height: 1.2; }
+    .stat span { max-width: 180px; flex: 1; color: var(--muted); font-size: .82rem; line-height: 1.2; }
     .evidence-card .body { max-width: 310px; color: var(--muted); line-height: 1.56; }
     .card-footer { position: relative; z-index: 1; display: block; margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line); }
     .year { color: var(--muted); font-size: .75rem; }
@@ -116,6 +120,9 @@
     .feedback-button { padding: 9px 11px; border: 1px solid rgba(255,255,255,.28); border-radius: 9px; background: transparent; color: white; font: inherit; font-size: .76rem; font-weight: 750; cursor: pointer; }
     .feedback-button:hover, .feedback-button.is-active { border-color: var(--yellow); background: rgba(243, 211, 107, .14); }
     .feedback-status { min-height: 1.3em; margin: 10px 0 0 !important; color: #b9d5c7 !important; font-size: .75rem; }
+    .feedback-recovery { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0 0 !important; }
+    .feedback-recovery a { color: white; font-size: .75rem; font-weight: 800; text-underline-offset: 3px; }
+    [hidden] { display: none !important; }
 
     .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 72px 0 64px; }
     .notes h2 { margin-bottom: 14px; font-size: 1.4rem; letter-spacing: -.04em; }
@@ -145,6 +152,7 @@
     @media (max-width: 560px) {
       .wrap { width: min(100% - 28px, 1120px); }
       .topnav { display: none; }
+      .mobile-jump { display: flex; gap: 8px; padding-top: 10px; padding-bottom: 12px; }
       h1 { font-size: clamp(3.2rem, 18vw, 5.8rem); }
       .hero { padding: 42px 0 38px; }
       .section-head { display: block; }
@@ -174,6 +182,10 @@
         <a href="#sources">Sources</a>
       </nav>
     </div>
+    <nav class="mobile-jump wrap" aria-label="Mobile quick links">
+      <a href="#next-step">Get help</a>
+      <a href="#sources">Sources</a>
+    </nav>
   </header>
 
   <main id="top" class="wrap">
@@ -221,7 +233,7 @@
         <article class="evidence-card" id="evidence-gap" data-card-id="03" data-label="Policy gap" data-metric="59%" data-supporting-value="did not report receiving SNAP" data-year="2020" data-source-id="S1" data-policy-source-id="S3" data-claim="Of food-insecure students who were potentially eligible for SNAP, 59 percent did not report receiving benefits.">
           <div class="card-top"><span class="card-number">03 / POLICY GAP</span><span class="card-type">What can help?</span></div>
           <h3>Potential eligibility is not reported receipt.</h3>
-          <div class="stat"><strong>59%</strong><span>did not report receiving SNAP</span></div>
+          <div class="stat"><strong>59%</strong><span>of food-insecure students potentially eligible for SNAP did not report receiving benefits</span></div>
           <p class="body">Among potentially SNAP-eligible food-insecure students, 59% did not report receiving benefits. USDA lists student exemptions such as 20 hours of paid work or work-study.</p>
           <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer">Read GAO</a><a class="card-link" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">Check USDA rules</a></div></div>
         </article>
@@ -263,7 +275,7 @@
         <p class="takeaway-lead">The next question is practical: how can a student check the current rules and find a trustworthy next step?</p>
         <p>This brief does not explain why a potentially eligible student did not report receiving SNAP, and it does not mean every food-insecure student qualifies. It keeps the 2020 estimate in its proper place: evidence to understand, not a live 2026 count.</p>
         <div class="takeaway-actions">
-          <a class="button button-primary" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">Explore student SNAP rules ↗</a>
+          <a class="button button-primary" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">Explore official federal SNAP student rules ↗</a>
           <a class="button button-secondary" href="#sources">Review sources</a>
         </div>
         <div class="reader-check" aria-labelledby="reader-check-title">
@@ -274,6 +286,7 @@
             <button class="feedback-button" type="button" data-feedback="unclear" aria-pressed="false">Not yet</button>
           </div>
           <p id="feedback-status" class="feedback-status" role="status">Private self-reported clarity check — no response leaves this browser.</p>
+          <p id="feedback-recovery" class="feedback-recovery" hidden><a href="#evidence-severity">Review the definition</a><a href="#sources">Open the sources</a></p>
         </div>
       </div>
     </section>
@@ -286,7 +299,7 @@
         <ul>
           <li>“Food insecurity” is not the same measure as hunger; USDA treats hunger as a possible consequence, not the survey measure itself.</li>
           <li>The 59% figure applies only to students who were food insecure and potentially eligible for SNAP; it is not a rate for all college students.</li>
-          <li>This prototype explains evidence. It does not determine eligibility or replace a campus adviser or state benefits office.</li>
+          <li>This prototype explains evidence. It does not determine eligibility; for personal guidance, contact a campus adviser or state benefits office.</li>
         </ul>
       </div>
       <div class="source-list" aria-label="Linked sources">
@@ -329,9 +342,9 @@
       },
       help: {
         label: 'Start with the official rules',
-        copy: 'Check the current USDA student exemptions. The card is a signpost, not an eligibility decision.',
+        copy: 'Check the current official federal SNAP student rules and exemptions. The card is a signpost, not an eligibility decision. For personal guidance, contact a campus adviser or state benefits office.',
         href: 'https://www.fna.usda.gov/snap/students',
-        link: 'Open USDA student rules ↗',
+        link: 'Open official federal SNAP student rules ↗',
         external: true
       }
     };
@@ -362,6 +375,7 @@
 
     const feedbackButtons = document.querySelectorAll('[data-feedback]');
     const feedbackStatus = document.querySelector('#feedback-status');
+    const feedbackRecovery = document.querySelector('#feedback-recovery');
     feedbackButtons.forEach((button) => button.addEventListener('click', () => {
       feedbackButtons.forEach((item) => {
         const active = item === button;
@@ -371,6 +385,7 @@
       feedbackStatus.textContent = button.dataset.feedback === 'clear'
         ? 'That is the intended outcome: a clear takeaway with an honest caveat.'
         : 'That is useful feedback: revisit the cards or open the original sources.';
+      feedbackRecovery.hidden = button.dataset.feedback !== 'unclear';
     }));
   </script>
 </body>

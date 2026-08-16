@@ -40,16 +40,26 @@ def exercise_page(page) -> None:
     help_link = page.locator("#action-link")
     assert help_link.get_attribute("href") == "https://www.fna.usda.gov/snap/students"
     assert help_link.get_attribute("target") == "_blank"
+    assert_text(page, "#action-copy", "Check the current official federal SNAP student rules and exemptions. The card is a signpost, not an eligibility decision. For personal guidance, contact a campus adviser or state benefits office.")
+    assert_text(page, "#action-link", "Open official federal SNAP student rules ↗")
 
     clear = page.locator('[data-feedback="clear"]')
     clear.click()
     assert clear.get_attribute("aria-pressed") == "true"
     assert_text(page, "#feedback-status", "That is the intended outcome: a clear takeaway with an honest caveat.")
+    assert page.locator("#feedback-recovery").get_attribute("hidden") is not None
 
     not_yet = page.locator('[data-feedback="unclear"]')
     not_yet.click()
     assert not_yet.get_attribute("aria-pressed") == "true"
     assert_text(page, "#feedback-status", "That is useful feedback: revisit the cards or open the original sources.")
+    assert page.locator("#feedback-recovery").is_visible()
+    assert page.locator('#feedback-recovery a[href="#sources"]').count() == 1
+
+    if page.viewport_size["width"] <= 560:
+        assert page.locator(".mobile-jump").is_visible()
+    else:
+        assert page.locator(".mobile-jump").is_hidden()
 
 
 def main() -> None:
