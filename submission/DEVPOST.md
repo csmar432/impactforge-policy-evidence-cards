@@ -68,7 +68,9 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 
 ## Project link
 
-For submission, add the final hosted URL or public repository URL here. The local demo runs with:
+Public repository: https://github.com/csmar432/impactforge-policy-evidence-cards
+
+The local demo runs with:
 
 ```bash
 python3 -m http.server 4173 --directory src
@@ -76,4 +78,6 @@ python3 -m http.server 4173 --directory src
 
 ## Team
 
-Replace this note with every builder's public name and contribution. For a solo entry, list the entrant's name and the work they completed; do not leave this placeholder in the final submission.
+yi (public GitHub handle: csmar432) — product concept, evidence framing, UX, implementation, validation, and submission materials.
+
+Confirm that the Devpost profile uses the intended public display name before submitting.

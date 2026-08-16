@@ -10,7 +10,7 @@
 | Intended users | `DEVPOST.md` → Who it helps | Ready |
 | Impact statement | `IMPACT_STATEMENT.md` | Ready |
 | Proof of work | At least one current Chromium screenshot; seven-image handoff bundle available locally | Official minimum ready; remaining images are internal options |
-| Project link | `DELIVERY.md` | Officially optional but encouraged; requires public deployment or repository URL |
+| Project link | `DELIVERY.md` | Officially optional but encouraged; public repository is ready at `https://github.com/csmar432/impactforge-policy-evidence-cards` |
 | Team | `DEVPOST.md` | Official size is 1–5; requires every builder's public name and contribution, while solo entries still name the entrant and work |
 | Eligibility / deadline | `README.md`; `DELIVERY.md` | Human confirmation required; official Overview and Rules pages currently disagree on deadline |
 | Evidence provenance | `data/evidence.json`; S1–S3 links on cards | Ready |

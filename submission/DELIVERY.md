@@ -11,8 +11,8 @@
 - [x] Intended users
 - [x] Impact statement
 - [x] Proof of work: at least one current Chromium screenshot is ready
-- [ ] Project link: officially optional but encouraged; add a public demo or repository URL if available
-- [ ] Team: add every builder's public name and contribution; official team size is 1–5 and solo entries are allowed
+- [x] Project link: public repository is available at `https://github.com/csmar432/impactforge-policy-evidence-cards`; officially optional but encouraged
+- [ ] Team: prepared as `yi` / `csmar432` with contribution details; copy into Devpost and confirm the intended profile display name; official team size is 1–5 and solo entries are allowed
 - [!] Eligibility and deadline require human confirmation: the official Overview and Rules pages currently disagree on the deadline, and eligibility depends on the entrant's identity, age, student status, residence, and the listed regional exclusions.
 
 ## Internal readiness checks
@@ -46,7 +46,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 
 ## Optional external additions
 
-- [ ] Add a public project link (officially optional but encouraged)
+- [x] Add a public project link (officially optional but encouraged): `https://github.com/csmar432/impactforge-policy-evidence-cards`
 - [ ] Run the five-minute reader test with real students (the synthetic evaluation cannot substitute for real-student evidence)
 - [ ] Record a 60–90 second demo video (optional proof format; a current screenshot already meets the proof minimum)
 
@@ -55,7 +55,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 - Verify the public link opens without a local server.
 - Upload at least one runtime screenshot as official proof; do not treat every internal asset as a Devpost requirement.
 - Open every source link once before submitting.
-- Replace the team placeholder with every builder's intended public name and contribution; official team size is 1–5, and a solo entry still lists the entrant and their work.
+- Confirm the Devpost display name for `yi` / `csmar432`, then copy the prepared team contribution; official team size is 1–5, and a solo entry still lists the entrant and their work.
 - Resolve the official deadline conflict before submission: Overview currently shows 2026-08-23 23:45 PDT, while Rules currently shows 2026-07-23 PDT.
 - Confirm the entrant is above the legal age of majority in the country of residence, is a student, is not entering as a company/professional organization, and does not reside in Brazil, Crimea, Cuba, Iran, North Korea, Quebec, or Russia.
 - Do not describe the 2020 evidence as a live 2026 estimate.
