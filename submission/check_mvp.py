@@ -140,7 +140,7 @@ def main() -> None:
     assert "official federal SNAP student rules" in page
     assert "That is the intended outcome" in page
     assert "That is useful feedback" in page
-    assert "Potential eligibility is not reported receipt." in page
+    assert "Potential SNAP eligibility is not reported receipt." in page
     assert "support is failing to connect" not in page
     assert "support systems fail to reach people" not in page
 

@@ -26,6 +26,13 @@ def assert_no_horizontal_overflow(page) -> None:
 def exercise_page(page) -> None:
     assert page.title() == "Policy Evidence Cards · Student food insecurity"
     assert page.locator("[data-card-id]").count() == 3
+    for external_link in page.locator('a[target="_blank"]').all():
+        aria_label = external_link.get_attribute("aria-label") or ""
+        assert "opens in new tab" in aria_label.lower(), aria_label
+
+    if page.viewport_size["width"] <= 560:
+        page.locator("[data-mobile-help]").click()
+        assert_text(page, "#action-label", "Start with the official rules")
 
     definition = page.locator('[data-choice="definition"]')
     definition.click()

@@ -14,4 +14,4 @@ This is a read-only, five-persona simulation performed by a subagent. It is not 
 
 ## Result
 
-The simulation led to a denominator clarification, mobile quick links, an actionable “Not yet” response, clearer federal-rules wording, and explicit brand focus styling. These changes improve the prototype but do not complete the required real-student test.
+The first simulation led to a denominator clarification, mobile quick links, an actionable “Not yet” response, clearer federal-rules wording, and explicit brand focus styling. A second independent simulation then identified and verified direct Help activation from the mobile quick link, descriptive new-tab labels for external sources, higher-contrast light-surface focus styles, and a more explicit SNAP title. These changes improve the prototype but do not complete the required real-student test.

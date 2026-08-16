@@ -38,14 +38,14 @@
     }
     .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 20px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
-    .brand:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; border-radius: 12px; }
+    .brand:focus-visible { outline: 3px solid var(--green-dark); outline-offset: 4px; border-radius: 12px; }
     .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--green); color: white; font-size: .82rem; }
     .topnav { display: flex; gap: 20px; color: var(--muted); font-size: .86rem; }
     .topnav a { text-decoration: none; }
     .topnav a:hover, .topnav a:focus-visible { color: var(--green); }
     .mobile-jump { display: none; }
     .mobile-jump a { flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; color: var(--green); font-size: .75rem; font-weight: 800; text-align: center; text-decoration: none; }
-    .mobile-jump a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .mobile-jump a:focus-visible { outline: 3px solid var(--green-dark); outline-offset: 3px; }
 
     .hero { padding: 72px 0 52px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 56px; }
     .eyebrow, .kicker { color: var(--green); font-size: .75rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
@@ -114,6 +114,7 @@
     .button-secondary { border: 1px solid rgba(255,255,255,.3); color: white; }
     .button:hover, .button:focus-visible { transform: translateY(-1px); }
     .button:focus-visible, .card-link:focus-visible, .text-link:focus-visible, .topnav a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+    .card-link:focus-visible, .text-link:focus-visible, .topnav a:focus-visible { outline-color: var(--green-dark); }
     .reader-check { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.2); }
     .reader-question { margin: 8px 0 12px; color: white !important; font-weight: 750; }
     .feedback-actions { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -183,7 +184,7 @@
       </nav>
     </div>
     <nav class="mobile-jump wrap" aria-label="Mobile quick links">
-      <a href="#next-step">Get help</a>
+        <a href="#next-step" data-mobile-help>Get help</a>
       <a href="#sources">Sources</a>
     </nav>
   </header>
@@ -219,7 +220,7 @@
           <h3>Food insecurity is not a fringe student experience.</h3>
           <div class="stat"><strong>23%</strong><span>of college students in the study</span></div>
           <p class="body">GAO estimated that 3.8 million college students experienced food insecurity in 2020. The estimate comes from a nationally representative Department of Education student study.</p>
-          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer">Read GAO</a></div></div>
+          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer" aria-label="Read the GAO college student food insecurity report (opens in new tab)">Read GAO</a></div></div>
         </article>
 
         <article class="evidence-card" id="evidence-severity" data-card-id="02" data-label="Severity" data-metric="2.2 million" data-display-metric="2.2M" data-supporting-value="very low food security" data-year="2020" data-source-id="S1" data-definition-source-id="S2" data-claim="Among food-insecure students, 2.2 million reported multiple instances of eating less than they should or skipping meals because they could not afford enough food.">
@@ -227,15 +228,15 @@
           <h3>For many students, the shortage changes eating patterns.</h3>
           <div class="stat"><strong>2.2M</strong><span>reported very low food security</span></div>
           <p class="body">Among food-insecure students, 2.2 million reported multiple instances of eating less than they should or skipping meals because they could not afford enough food.</p>
-          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer">Read GAO</a><a class="card-link" href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement" target="_blank" rel="noreferrer">See definition</a></div></div>
+          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer" aria-label="Read the GAO college student food insecurity report (opens in new tab)">Read GAO</a><a class="card-link" href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement" target="_blank" rel="noreferrer" aria-label="Read the USDA ERS food security measurement definition (opens in new tab)">See definition</a></div></div>
         </article>
 
         <article class="evidence-card" id="evidence-gap" data-card-id="03" data-label="Policy gap" data-metric="59%" data-supporting-value="did not report receiving SNAP" data-year="2020" data-source-id="S1" data-policy-source-id="S3" data-claim="Of food-insecure students who were potentially eligible for SNAP, 59 percent did not report receiving benefits.">
           <div class="card-top"><span class="card-number">03 / POLICY GAP</span><span class="card-type">What can help?</span></div>
-          <h3>Potential eligibility is not reported receipt.</h3>
+          <h3>Potential SNAP eligibility is not reported receipt.</h3>
           <div class="stat"><strong>59%</strong><span>of food-insecure students potentially eligible for SNAP did not report receiving benefits</span></div>
           <p class="body">Among potentially SNAP-eligible food-insecure students, 59% did not report receiving benefits. USDA lists student exemptions such as 20 hours of paid work or work-study.</p>
-          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer">Read GAO</a><a class="card-link" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">Check USDA rules</a></div></div>
+          <div class="card-footer"><span class="year">U.S. · 2020 data</span><div class="card-sources"><a class="card-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer" aria-label="Read the GAO college student food insecurity report (opens in new tab)">Read GAO</a><a class="card-link" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer" aria-label="Read the official federal SNAP student rules (opens in new tab)">Check USDA rules</a></div></div>
         </article>
       </div>
 
@@ -275,7 +276,7 @@
         <p class="takeaway-lead">The next question is practical: how can a student check the current rules and find a trustworthy next step?</p>
         <p>This brief does not explain why a potentially eligible student did not report receiving SNAP, and it does not mean every food-insecure student qualifies. It keeps the 2020 estimate in its proper place: evidence to understand, not a live 2026 count.</p>
         <div class="takeaway-actions">
-          <a class="button button-primary" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">Explore official federal SNAP student rules ↗</a>
+          <a class="button button-primary" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer" aria-label="Explore official federal SNAP student rules (opens in new tab)">Explore official federal SNAP student rules ↗</a>
           <a class="button button-secondary" href="#sources">Review sources</a>
         </div>
         <div class="reader-check" aria-labelledby="reader-check-title">
@@ -305,15 +306,15 @@
       <div class="source-list" aria-label="Linked sources">
         <div class="source-item">
           <span class="source-id">S1</span>
-          <p><a class="text-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer">U.S. Government Accountability Office</a><small>Supplemental Nutrition Assistance Program: Estimated Eligibility and Receipt among Food Insecure College Students · GAO-24-107074</small></p>
+          <p><a class="text-link" href="https://www.gao.gov/products/gao-24-107074" target="_blank" rel="noreferrer" aria-label="Read the GAO college student food insecurity report (opens in new tab)">U.S. Government Accountability Office</a><small>Supplemental Nutrition Assistance Program: Estimated Eligibility and Receipt among Food Insecure College Students · GAO-24-107074</small></p>
         </div>
         <div class="source-item">
           <span class="source-id">S2</span>
-          <p><a class="text-link" href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement" target="_blank" rel="noreferrer">USDA Economic Research Service</a><small>Food Security in the U.S. — measurement and definitions</small></p>
+          <p><a class="text-link" href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement" target="_blank" rel="noreferrer" aria-label="Read the USDA ERS food security measurement definition (opens in new tab)">USDA Economic Research Service</a><small>Food Security in the U.S. — measurement and definitions</small></p>
         </div>
         <div class="source-item">
           <span class="source-id">S3</span>
-          <p><a class="text-link" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer">USDA Food and Nutrition Administration</a><small>Students · SNAP eligibility rules and exemptions</small></p>
+          <p><a class="text-link" href="https://www.fna.usda.gov/snap/students" target="_blank" rel="noreferrer" aria-label="Read the official federal SNAP student rules (opens in new tab)">USDA Food and Nutrition Administration</a><small>Students · SNAP eligibility rules and exemptions</small></p>
         </div>
       </div>
     </section>
@@ -332,19 +333,22 @@
         label: 'Start with the scale',
         copy: 'See who is included in the 23% estimate before drawing a conclusion about all students.',
         href: '#evidence-scale',
-        link: 'Open the scale card →'
+        link: 'Open the scale card →',
+        ariaLabel: 'Open the scale card'
       },
       definition: {
         label: 'Start with the definition',
         copy: 'Separate food insecurity from hunger, then read what “very low food security” means in the source.',
         href: '#evidence-severity',
-        link: 'Open the severity card →'
+        link: 'Open the severity card →',
+        ariaLabel: 'Open the severity card'
       },
       help: {
         label: 'Start with the official rules',
         copy: 'Check the current official federal SNAP student rules and exemptions. The card is a signpost, not an eligibility decision. For personal guidance, contact a campus adviser or state benefits office.',
         href: 'https://www.fna.usda.gov/snap/students',
         link: 'Open official federal SNAP student rules ↗',
+        ariaLabel: 'Open official federal SNAP student rules (opens in new tab)',
         external: true
       }
     };
@@ -364,6 +368,7 @@
       actionCopyText.textContent = selection.copy;
       actionLink.href = selection.href;
       actionLink.textContent = selection.link;
+      actionLink.setAttribute('aria-label', selection.ariaLabel);
       if (selection.external) {
         actionLink.target = '_blank';
         actionLink.rel = 'noreferrer';
@@ -387,6 +392,9 @@
         : 'That is useful feedback: revisit the cards or open the original sources.';
       feedbackRecovery.hidden = button.dataset.feedback !== 'unclear';
     }));
+
+    const mobileHelp = document.querySelector('[data-mobile-help]');
+    mobileHelp.addEventListener('click', () => document.querySelector('[data-choice="help"]').click());
   </script>
 </body>
 </html>
