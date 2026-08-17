@@ -29,6 +29,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 
 - [x] `impactforge-mvp-runtime-desktop.png`
 - [x] `impactforge-mvp-runtime-mobile.png`
+- [x] `impactforge-mvp-interaction-desktop.png`
 
 ## Internal handoff assets
 
@@ -39,10 +40,11 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 5. `impactforge-mvp-full.png`
 6. `impactforge-mvp-runtime-desktop.png`
 7. `impactforge-mvp-runtime-mobile.png`
-8. `DEVPOST.md` content to copy into the submission form
-9. `IMPACT_STATEMENT.md` content to copy into the impact field
-10. `AUDIT_MATRIX.md` for internal handoff only
-11. `SYNTHETIC_USER_TEST.md` for internal usability preflight only
+8. `impactforge-mvp-interaction-desktop.png`
+9. `DEVPOST.md` content to copy into the submission form
+10. `IMPACT_STATEMENT.md` content to copy into the impact field
+11. `AUDIT_MATRIX.md` for internal handoff only
+12. `SYNTHETIC_USER_TEST.md` for internal usability preflight only
 
 ## Optional external additions
 
@@ -54,6 +56,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 
 - Verify the public link opens without a local server.
 - Upload at least one runtime screenshot as official proof; do not treat every internal asset as a Devpost requirement.
+- Prefer the full desktop runtime screenshot plus `impactforge-mvp-interaction-desktop.png` when showing the product and its source-to-action path.
 - Open every source link once before submitting.
 - Confirm the Devpost display name for `yi` / `csmar432`, then copy the prepared team contribution; official team size is 1–5, and a solo entry still lists the entrant and their work.
 - Resolve the official deadline conflict before submission: Overview currently shows 2026-08-23 23:45 PDT, while Rules currently shows 2026-07-23 PDT.
@@ -61,4 +64,4 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 - Do not describe the 2020 evidence as a live 2026 estimate.
 - Do not invent reader-test results; leave the checklist open until real testers complete it.
 - The reader check is self-reported clarity, not a comprehension measurement.
-- All seven PNGs come from the same headless Chromium run; they do not replace a real phone test or real-user validation.
+- All eight PNGs come from the same headless Chromium run; they do not replace a real phone test or real-user validation.

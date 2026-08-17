@@ -1,5 +1,6 @@
 """Run a real Chromium smoke test and refresh all proof screenshots."""
 
+import os
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -7,7 +8,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 SUBMISSION = ROOT / "submission"
-URL = "http://127.0.0.1:4173/"
+URL = os.environ.get("IMPACTFORGE_URL", "http://127.0.0.1:4173/")
 SYSTEM_CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
 
@@ -84,18 +85,32 @@ def main() -> None:
 
         page_height = desktop.evaluate("document.documentElement.scrollHeight")
         desktop.set_viewport_size({"width": 1120, "height": page_height})
-        crop_names = (
-            "impactforge-mvp-desktop.png",
-            "impactforge-mvp-desktop-page2.png",
-            "impactforge-mvp-desktop-page3.png",
+        reading_strip = desktop.locator(".reading-strip").bounding_box()
+        next_step = desktop.locator("#next-step").bounding_box()
+        takeaway = desktop.locator("#takeaway").bounding_box()
+        sources = desktop.locator("#sources").bounding_box()
+        crop_specs = (
+            ("impactforge-mvp-desktop.png", 0, reading_strip["y"] + reading_strip["height"]),
+            ("impactforge-mvp-desktop-page2.png", next_step["y"], takeaway["y"] + takeaway["height"]),
+            ("impactforge-mvp-desktop-page3.png", sources["y"], page_height),
         )
-        for index, name in enumerate(crop_names):
-            top = page_height * index // len(crop_names)
-            bottom = page_height * (index + 1) // len(crop_names)
+        for name, top, bottom in crop_specs:
             desktop.screenshot(
                 path=str(SUBMISSION / name),
                 clip={"x": 0, "y": top, "width": 1120, "height": bottom - top},
             )
+
+        desktop.locator('[data-choice="help"]').click()
+        action_box = desktop.locator("#next-step").bounding_box()
+        desktop.screenshot(
+            path=str(SUBMISSION / "impactforge-mvp-interaction-desktop.png"),
+            clip={
+                "x": 0,
+                "y": max(0, action_box["y"] - 20),
+                "width": 1120,
+                "height": action_box["height"] + 40,
+            },
+        )
         desktop.set_viewport_size({"width": 1120, "height": 900})
         exercise_page(desktop)
 
@@ -116,7 +131,7 @@ def main() -> None:
 
         browser.close()
 
-    print("PASS: Chromium interactions, 4 responsive widths, and 7 current proof screenshots")
+    print("PASS: Chromium interactions, 4 responsive widths, and 8 current proof screenshots")
 
 
 if __name__ == "__main__":

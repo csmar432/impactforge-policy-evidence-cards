@@ -12,6 +12,7 @@
       "supporting_value": "3.8 million college students",
       "claim": "An estimated 23 percent of college students experienced food insecurity in 2020.",
       "source_id": "S1",
+      "evidence_locator": "GAO-24-107074, report p. 6, Figure 3; see also Highlights, PDF p. 2",
       "year": 2020
     },
     {
@@ -23,6 +24,7 @@
       "claim": "Among food-insecure students, 2.2 million reported multiple instances of eating less than they should or skipping meals because they could not afford enough food.",
       "source_id": "S1",
       "definition_source_id": "S2",
+      "evidence_locator": "GAO-24-107074, report p. 6, Figure 3; see also Highlights, PDF p. 2",
       "year": 2020
     },
     {
@@ -34,6 +36,7 @@
       "claim": "Of food-insecure students who were potentially eligible for SNAP, 59 percent did not report receiving benefits.",
       "source_id": "S1",
       "policy_source_id": "S3",
+      "evidence_locator": "GAO-24-107074, report p. 17, Figure 14; see also Highlights, PDF p. 2",
       "year": 2020
     }
   ],
@@ -44,6 +47,7 @@
       "title": "Supplemental Nutrition Assistance Program: Estimated Eligibility and Receipt among Food Insecure College Students",
       "identifier": "GAO-24-107074",
       "url": "https://www.gao.gov/products/gao-24-107074",
+      "evidence_locator": "Highlights, PDF p. 2; report pp. 6 and 17 (Figures 3 and 14)",
       "accessed_at": "2026-08-16"
     },
     {

@@ -62,6 +62,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 - `submission/USER_TEST_PROTOCOL.md` — five-minute student comprehension test
 - `submission/impactforge-mvp-runtime-desktop.png` — current Chromium runtime proof at desktop width
 - `submission/impactforge-mvp-runtime-mobile.png` — current Chromium runtime proof at 320px width
+- `submission/impactforge-mvp-interaction-desktop.png` — current Chromium proof of the selected help path
 - `submission/impactforge-mvp-desktop.png`, `impactforge-mvp-desktop-page2.png`, `impactforge-mvp-desktop-page3.png` — optional cropped desktop handoff views
 - `submission/impactforge-mvp-full.png`, `impactforge-mvp-mobile.png` — optional full-page handoff views
 - `submission/DEMO_SCRIPT.md` — 60-second walkthrough

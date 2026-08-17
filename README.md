@@ -55,8 +55,10 @@ python3 -m http.server 4173 --directory src
 ```bash
 python3 submission/check_mvp.py
 python3 submission/check_mvp.py --url http://127.0.0.1:4173/
-python3 submission/check_browser.py  # 需要本机已有 Playwright/Chromium；同时刷新全部七张证明截图
+IMPACTFORGE_URL=http://127.0.0.1:4173/ python3 submission/check_browser.py  # 需要本机已有 Playwright/Chromium；同时刷新全部八张证明截图
 ```
+
+如果 `4173` 已被其他本地服务占用，使用任意空闲端口启动 `src/`，再通过 `IMPACTFORGE_URL` 指向该地址；不要让验收脚本误读其他项目的页面。
 
 ## 投稿边界
 
