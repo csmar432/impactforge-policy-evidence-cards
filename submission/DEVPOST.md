@@ -66,10 +66,13 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 - `submission/impactforge-mvp-desktop.png`, `impactforge-mvp-desktop-page2.png`, `impactforge-mvp-desktop-page3.png` — optional cropped desktop handoff views
 - `submission/impactforge-mvp-full.png`, `impactforge-mvp-mobile.png` — optional full-page handoff views
 - `submission/DEMO_SCRIPT.md` — 60-second walkthrough
+- `submission/impactforge-demo.webm` — silent 60-second interaction walkthrough
 
 ## Project link
 
 Public repository: https://github.com/csmar432/impactforge-policy-evidence-cards
+
+Live demo: https://csmar432.github.io/impactforge-policy-evidence-cards/
 
 The local demo runs with:
 

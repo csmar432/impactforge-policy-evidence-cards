@@ -12,6 +12,7 @@
 - [x] Impact statement
 - [x] Proof of work: at least one current Chromium screenshot is ready
 - [x] Project link: public repository is available at `https://github.com/csmar432/impactforge-policy-evidence-cards`; officially optional but encouraged
+- [x] Live demo: `https://csmar432.github.io/impactforge-policy-evidence-cards/`; verified with HTTP 200 and current page content
 - [ ] Team: prepared as `yi` / `csmar432` with contribution details; copy into Devpost and confirm the intended profile display name; official team size is 1–5 and solo entries are allowed
 - [!] Eligibility and deadline require human confirmation: the official Overview and Rules pages currently disagree on the deadline, and eligibility depends on the entrant's identity, age, student status, residence, and the listed regional exclusions.
 
@@ -22,6 +23,7 @@
 - [x] Local acceptance and Chromium smoke tests completed
 - [x] Internal requirements matrix completed
 - [x] Five-persona synthetic usability evaluation completed; it is not real-student evidence
+- [x] GAO evidence locators added to the page and `data/evidence.json`
 
 ## Official proof-of-work minimum
 
@@ -30,6 +32,7 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 - [x] `impactforge-mvp-runtime-desktop.png`
 - [x] `impactforge-mvp-runtime-mobile.png`
 - [x] `impactforge-mvp-interaction-desktop.png`
+- [x] `impactforge-demo.webm` (silent 60-second interaction walkthrough)
 
 ## Internal handoff assets
 
@@ -41,21 +44,25 @@ ImpactForge requires at least one screenshot, demo video, or file showing the pr
 6. `impactforge-mvp-runtime-desktop.png`
 7. `impactforge-mvp-runtime-mobile.png`
 8. `impactforge-mvp-interaction-desktop.png`
-9. `DEVPOST.md` content to copy into the submission form
-10. `IMPACT_STATEMENT.md` content to copy into the impact field
-11. `AUDIT_MATRIX.md` for internal handoff only
-12. `SYNTHETIC_USER_TEST.md` for internal usability preflight only
+9. `impactforge-demo.webm`
+10. `DEVPOST.md` content to copy into the submission form
+11. `IMPACT_STATEMENT.md` content to copy into the impact field
+12. `AUDIT_MATRIX.md` for internal handoff only
+13. `SYNTHETIC_USER_TEST.md` for internal usability preflight only
 
 ## Optional external additions
 
 - [x] Add a public project link (officially optional but encouraged): `https://github.com/csmar432/impactforge-policy-evidence-cards`
+- [x] Add a public live demo: `https://csmar432.github.io/impactforge-policy-evidence-cards/`
+- [x] Generate a silent 60-second walkthrough: `impactforge-demo.webm`; add narration only if desired
 - [ ] Run the five-minute reader test with real students (the synthetic evaluation cannot substitute for real-student evidence)
-- [ ] Record a 60–90 second demo video (optional proof format; a current screenshot already meets the proof minimum)
 
 ## Final human checks
 
 - Verify the public link opens without a local server.
+- Verify the live demo opens in a private window: `https://csmar432.github.io/impactforge-policy-evidence-cards/`.
 - Upload at least one runtime screenshot as official proof; do not treat every internal asset as a Devpost requirement.
+- Upload `impactforge-demo.webm` if Devpost accepts the file directly; otherwise publish the same recording to an allowed video host.
 - Prefer the full desktop runtime screenshot plus `impactforge-mvp-interaction-desktop.png` when showing the product and its source-to-action path.
 - Open every source link once before submitting.
 - Confirm the Devpost display name for `yi` / `csmar432`, then copy the prepared team contribution; official team size is 1–5, and a solo entry still lists the entrant and their work.

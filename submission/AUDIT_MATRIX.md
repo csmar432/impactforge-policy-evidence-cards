@@ -9,22 +9,22 @@
 | Tools / languages / APIs | `DEVPOST.md` → Tools and technology | Ready |
 | Intended users | `DEVPOST.md` → Who it helps | Ready |
 | Impact statement | `IMPACT_STATEMENT.md` | Ready |
-| Proof of work | At least one current Chromium screenshot; seven-image handoff bundle available locally | Official minimum ready; remaining images are internal options |
+| Proof of work | Current Chromium screenshots, interaction screenshot, and silent 60-second walkthrough available locally | Official minimum ready; upload the clearest screenshot/video combination |
 | Project link | `DELIVERY.md` | Officially optional but encouraged; public repository is ready at `https://github.com/csmar432/impactforge-policy-evidence-cards` |
 | Team | `DEVPOST.md` | Official size is 1–5; requires every builder's public name and contribution, while solo entries still name the entrant and work |
 | Eligibility / deadline | `README.md`; `DELIVERY.md` | Human confirmation required; official Overview and Rules pages currently disagree on deadline |
-| Evidence provenance | `data/evidence.json`; S1–S3 links on cards | Ready |
+| Evidence provenance | `data/evidence.json`; S1–S3 links on cards; GAO Highlights p. 2, report pp. 6 and 17 | Ready |
 | Reader action | `src/index.html` source-to-action panel | Ready |
 | Automated acceptance | `check_mvp.py`, `check_browser.py`, plus inline JavaScript syntax check | Internal validation ready; not an extra Devpost field |
 | Responsive proof | Chromium-generated `impactforge-mvp-mobile.png` and `impactforge-mvp-runtime-mobile.png` | 320px browser proof ready; real phone test still required |
 | Real-user validation | `USER_TEST_PROTOCOL.md` | Not an official requirement; requires real student testers and may strengthen impact and UX evidence |
-| Demo video | `DEMO_SCRIPT.md` | Optional proof format; requires human recording, while a current screenshot already meets the proof minimum |
+| Demo video | `DEMO_SCRIPT.md`; `impactforge-demo.webm` | Optional proof format; silent 60-second recording is ready, narration remains optional |
 
 ## Official judging criteria
 
 | Criterion | Evidence in this workspace | Remaining limit |
 |---|---|---|
-| Build Quality (30%) | Working dependency-free MVP; provenance check; Chromium interaction and responsive checks | Public hosting is still encouraged for judge access |
+| Build Quality (30%) | Working dependency-free MVP; provenance check; Chromium interaction and responsive checks; public Pages demo | Public hosting is now available; verify it in a private window before submission |
 | Real-World Impact (25%) | Documented student problem; source-linked evidence; direct path to current USDA rules | Real student testing has not been run and no results are claimed |
 | Creativity & Approach (20%) | Reusable evidence-card sequence connects scale, severity, policy gap, caveats, and action | Judges determine originality; no comparative claim is made |
 | User Experience (15%) | Responsive desktop/mobile layouts; keyboard focus; clear next-step choices; private reader check | Real phone and real-user validation remain external |

@@ -50,6 +50,8 @@ python3 -m http.server 4173 --directory src
 
 然后打开 `http://127.0.0.1:4173/`。这是本地演示地址；页面没有依赖、后端或构建步骤，可直接用于本地验收和 proof of work。评委公开访问仍需要公开仓库或部署链接。
 
+公开演示：<https://csmar432.github.io/impactforge-policy-evidence-cards/>。GitHub Pages 由 `.github/workflows/pages.yml` 从 `src/` 自动部署。
+
 验收：
 
 ```bash
